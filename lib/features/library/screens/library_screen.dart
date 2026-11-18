@@ -284,6 +284,13 @@ class _BrandHeader extends StatelessWidget {
     ),
     child: Row(
       children: [
+        Image.asset(
+          'assets/logo_camilus.png.png',
+          width: 36,
+          height: 38,
+          fit: BoxFit.contain,
+        ),
+        const SizedBox(width: 6),
         Text(
           'MEDIAKIT',
           style: Theme.of(context).textTheme.headlineMedium
@@ -313,6 +320,13 @@ class _BrandHeader extends StatelessWidget {
               ),
             ),
           ],
+        ),
+        const SizedBox(width: 9),
+        Image.asset(
+          'assets/logo_mediakit.png.png',
+          width: 32,
+          height: 32,
+          fit: BoxFit.contain,
         ),
       ],
     ),

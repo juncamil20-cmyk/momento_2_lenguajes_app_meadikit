@@ -194,3 +194,67 @@ class MediaBottomNavigation extends StatelessWidget {
     ],
   );
 }
+
+class MediaAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const MediaAppBar({
+    super.key,
+    required this.title,
+    this.onBack,
+    this.showBack = true,
+    this.actions = const [],
+  });
+
+  final String title;
+  final VoidCallback? onBack;
+  final bool showBack;
+  final List<Widget> actions;
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+
+  @override
+  Widget build(BuildContext context) => AppBar(
+    automaticallyImplyLeading: false,
+    leading: showBack
+        ? IconButton(
+            onPressed: onBack ?? () => Navigator.maybePop(context),
+            icon: const Icon(Icons.arrow_back),
+          )
+        : null,
+    title: Row(
+      children: [
+        Image.asset(
+          'assets/logo_camilus.png.png',
+          width: 34,
+          height: 38,
+          fit: BoxFit.contain,
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: Text(
+            title,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: const TextStyle(
+              fontSize: 13,
+              letterSpacing: .65,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+        ),
+      ],
+    ),
+    actions: [
+      ...actions,
+      Padding(
+        padding: const EdgeInsets.only(right: 12),
+        child: Image.asset(
+          'assets/logo_mediakit.png.png',
+          width: 34,
+          height: 34,
+          fit: BoxFit.contain,
+        ),
+      ),
+    ],
+  );
+}

@@ -129,19 +129,9 @@ class _ProjectFormScreenState extends State<ProjectFormScreen> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(
-      leading: IconButton(
-        onPressed: () => Navigator.pop(context),
-        icon: const Icon(Icons.arrow_back),
-      ),
-      title: Text(
-        widget.project == null ? 'CREAR PROYECTO' : 'EDITAR PROYECTO',
-        style: const TextStyle(
-          fontSize: 14,
-          letterSpacing: .7,
-          fontWeight: FontWeight.w700,
-        ),
-      ),
+    appBar: MediaAppBar(
+      title: widget.project == null ? 'CREAR PROYECTO' : 'EDITAR PROYECTO',
+      onBack: () => Navigator.pop(context),
     ),
     body: SafeArea(
       child: Form(

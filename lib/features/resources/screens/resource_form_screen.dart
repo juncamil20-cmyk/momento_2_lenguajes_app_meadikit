@@ -188,19 +188,9 @@ class _ResourceFormScreenState extends State<ResourceFormScreen> {
     final chosenPath = _picked?.path ?? resource?.localFilePath;
     final chosenSize = _picked?.size ?? resource?.fileSize;
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: const Icon(Icons.arrow_back),
-        ),
-        title: Text(
-          resource == null ? 'AGREGAR RECURSO' : 'EDITAR RECURSO',
-          style: const TextStyle(
-            fontSize: 14,
-            letterSpacing: .7,
-            fontWeight: FontWeight.w700,
-          ),
-        ),
+      appBar: MediaAppBar(
+        title: resource == null ? 'AGREGAR RECURSO' : 'EDITAR RECURSO',
+        onBack: () => Navigator.pop(context),
       ),
       body: SafeArea(
         child: Form(

@@ -161,19 +161,9 @@ class _ProjectDetailScreenState extends State<ProjectDetailScreen> {
       (sum, item) => sum + item.fileSize,
     );
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: const Icon(Icons.arrow_back),
-        ),
-        title: const Text(
-          'DETALLE DEL PROYECTO',
-          style: TextStyle(
-            fontSize: 14,
-            letterSpacing: .7,
-            fontWeight: FontWeight.w700,
-          ),
-        ),
+      appBar: MediaAppBar(
+        title: 'DETALLE DEL PROYECTO',
+        onBack: () => Navigator.pop(context),
         actions: [
           PopupMenuButton<String>(
             onSelected: (value) =>

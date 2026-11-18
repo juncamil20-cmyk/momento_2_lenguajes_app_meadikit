@@ -45,7 +45,7 @@ La navegación utiliza una sola pantalla de detalle de proyecto, conserva el pro
 
 Los colores, tipografía, tema, botones y campos se centralizan en lib/core/theme/ y lib/core/widgets/media_widgets.dart. La interfaz usa fondo #141311, naranja #F45316, crema #EEE8DB y superficies oscuras, con navegación inferior y diseño desplazable.
 
-Las fuentes Bebas Neue y DM Sans están incluidas localmente en assets/fonts/ junto con sus licencias SIL Open Font License. Se empaquetan con la aplicación y no requieren conexión al ejecutarse. Los archivos originales de Figma (capturas, User Flow, Design System y logos) no aparecen en el repositorio; la interfaz se construyó usando las imágenes compartidas en la conversación.
+Las fuentes Bebas Neue y DM Sans están incluidas localmente en assets/fonts/ junto con sus licencias SIL Open Font License. Se empaquetan con la aplicación y no requieren conexión al ejecutarse. Los logos de Camilus y MediaKit se empaquetan localmente y aparecen en los encabezados de las pantallas principales.
 
 ## Tecnologías y paquetes
 
@@ -96,13 +96,12 @@ La configuración Android contiene un ajuste acotado al subproyecto file_picker 
 - **Mi Biblioteca:** contadores desde SQLite, búsqueda, categorías, proyectos recientes y estados vacíos.
 - **Proyectos:** alta, consulta, edición, búsqueda, detalle y eliminación en cascada de recursos.
 - **Recursos:** selector de archivos, copia local, categoría, nombre, descripción, tamaño, extensión, fecha y dimensiones cuando aplican.
-- **Diseño:** colores y espaciado centralizados; Bebas Neue y DM Sans empaquetadas; logos oficiales pendientes de incorporar.
+- **Diseño:** colores y espaciado centralizados; Bebas Neue y DM Sans empaquetadas; logos de Camilus y MediaKit incluidos en encabezados.
 - **Verificación:** análisis estático, prueba widget de inicio y compilación APK debug. No se probó aún en emulador ni en teléfono físico.
 - **PDF académico:** el archivo está disponible en el equipo, pero no se pudo extraer su texto con las herramientas locales; por ello queda pendiente contrastar la rúbrica académica directamente.
 
 ## Próximos pasos — Momento 3
 
 1. Probar en un emulador o teléfono: crear, editar y borrar proyectos; registrar archivos de cada formato; cerrar y abrir la app para confirmar persistencia.
-2. Incorporar los logos/capturas oficiales al repositorio.
 3. Contrastar la rúbrica del PDF y documentar evidencias visuales de ejecución.
 4. Revisar tamaños pequeños y tabletas en dispositivos reales.

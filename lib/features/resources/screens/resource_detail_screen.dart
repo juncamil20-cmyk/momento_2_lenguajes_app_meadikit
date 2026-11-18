@@ -122,19 +122,9 @@ class _ResourceDetailScreenState extends State<ResourceDetailScreen> {
           'webp',
         ].contains(resource.fileExtension.toLowerCase());
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () => Navigator.pop(context),
-          icon: const Icon(Icons.arrow_back),
-        ),
-        title: const Text(
-          'DETALLE DEL RECURSO',
-          style: TextStyle(
-            fontSize: 14,
-            letterSpacing: .7,
-            fontWeight: FontWeight.w700,
-          ),
-        ),
+      appBar: MediaAppBar(
+        title: 'DETALLE DEL RECURSO',
+        onBack: () => Navigator.pop(context),
       ),
       body: _loading
           ? const Center(
